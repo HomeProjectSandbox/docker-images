@@ -1,0 +1,86 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "SkM1WpWeIPhEd66HYBUzx",
+      "type": "rectangle",
+      "x": 203.77734375,
+      "y": 201.140625,
+      "width": 320.64453125,
+      "height": 86.56640625,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 821940907,
+      "version": 103,
+      "versionNonce": 474980913,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "CKN-Uqr729cmC_1WjQ5S6"
+        }
+      ],
+      "updated": 1774692316852,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "CKN-Uqr729cmC_1WjQ5S6",
+      "type": "text",
+      "x": 342.2396240234375,
+      "y": 231.923828125,
+      "width": 43.719970703125,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0V",
+      "roundness": null,
+      "seed": 792233311,
+      "version": 66,
+      "versionNonce": 190723089,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1774692316852,
+      "link": null,
+      "locked": false,
+      "text": "test",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "SkM1WpWeIPhEd66HYBUzx",
+      "originalText": "test",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
