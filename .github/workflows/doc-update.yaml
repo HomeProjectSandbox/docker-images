@@ -19,7 +19,8 @@ jobs:
 
       - name: Checkout this repository
         uses: actions/checkout@v6
-        path: image-repo
+        with:
+          path: image-repo
 
       - name: Checkout doc repository
         uses: actions/checkout@v6
