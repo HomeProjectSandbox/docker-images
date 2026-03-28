@@ -1,0 +1,28 @@
+name: Docker build and push
+
+on:
+  push:
+    branches: [images/homeproject_example]
+  #pull_request:
+  #  branches: [images/homeproject_example]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        name: Check out code
+
+      - uses: mr-smithers-excellent/docker-build-push@v6
+        name: Build & push Docker image
+        with:
+          image: tamasujvari/homeproject_example
+          tags: stable,latest
+          registry: docker.io
+          multiPlatform: true
+          platform: linux/amd64,linux/arm64,linux/arm/v7
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
