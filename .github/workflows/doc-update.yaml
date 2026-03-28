@@ -1,49 +1,49 @@
-name: Update Repo B
+#name: Update Repo B
 
-on:
-  push:
-    branches: [ images/homeproject_example ]
+#on:
+#  push:
+#    branches: [ images/homeproject_example ]
 
-env:
-  IMAGE_BRANCH: images/homeproject_example
+#env:
+#  IMAGE_BRANCH: images/homeproject_example
 
-jobs:
-  update-documentation:
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - name: Set the IMAGE_BRANCH environment variable
-        run: |
-          echo "${{ env.IMAGE_BRANCH }}"
-
-      - name: Checkout this repository
-        uses: actions/checkout@v6
-        with:
-          path: image-repo
-
-      - name: Checkout doc repository
-        uses: actions/checkout@v6
-        with:
-          repository: HomeProjectSandbox/documentation
-          token: ${{ secrets.REPO_DOC_TOKEN }}  #created manually
-          path: documentation
-
-      - name: Modify documentation repository
-        run: |
-          DEST="documentation/doc/project-doc/docs/homelab_services/${{ env.IMAGE_BRANCH }}"
-          mkdir -p "$DEST"
-          cp -r image-repo/doc/. "$DEST/"
-
-      - name: Commit and push
-        run: |
-          cd documentation
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add .
-          if git diff --staged --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-          git commit -m "Update from ${{ env.IMAGE_BRANCH }}"
-          git push
+#jobs:
+#  update-documentation:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#
+#      - name: Set the IMAGE_BRANCH environment variable
+#        run: |
+#          echo "${{ env.IMAGE_BRANCH }}"
+#
+#      - name: Checkout this repository
+#        uses: actions/checkout@v6
+#        with:
+#          path: image-repo
+#
+#      - name: Checkout doc repository
+#        uses: actions/checkout@v6
+#        with:
+#          repository: HomeProjectSandbox/documentation
+#          token: ${{ secrets.REPO_DOC_TOKEN }}  #created manually
+#          path: documentation
+#
+#      - name: Modify documentation repository
+#        run: |
+#          DEST="documentation/doc/project-doc/docs/homelab_services/${{ env.IMAGE_BRANCH }}"
+#          mkdir -p "$DEST"
+#          cp -r image-repo/doc/. "$DEST/"
+#
+#      - name: Commit and push
+#        run: |
+#          cd documentation
+#          git config user.name "github-actions"
+#          git config user.email "actions@github.com"
+#          git add .
+#          if git diff --staged --quiet; then
+#            echo "No changes to commit."
+#            exit 0
+#          fi
+#          git commit -m "Update from ${{ env.IMAGE_BRANCH }}"
+#          git push
