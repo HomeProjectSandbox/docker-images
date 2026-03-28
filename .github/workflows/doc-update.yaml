@@ -1,20 +1,19 @@
-#name: Update Repo B
+name: skipped
 
-#on:
-#  push:
-#    branches: [ images/homeproject_example ]
+on:
+  push:
+    branches: [ images/homeproject_example ]
 
-#env:
-#  IMAGE_BRANCH: images/homeproject_example
+env:
+  IMAGE_BRANCH: images/homeproject_example
 
-#jobs:
-#  update-documentation:
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#
-#      - name: Set the IMAGE_BRANCH environment variable
-#        run: |
+jobs:
+  update-documentation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set the IMAGE_BRANCH environment variable
+        run: |
 #          echo "${{ env.IMAGE_BRANCH }}"
 #
 #      - name: Checkout this repository
