@@ -23,6 +23,7 @@ jobs:
           tags: stable,latest
           registry: docker.io
           multiPlatform: true
-          platform: linux/amd64,linux/arm64,linux/arm/v7
+          #platform: linux/amd64,linux/arm64,linux/arm/v7
+          platform: linux/amd64,linux/arm64
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
